@@ -1,0 +1,11 @@
+- title "Twitter Ids"
+%table
+  %tr
+    %th Id
+  - for twitter_id in @twitter_ids
+    %tr
+      %td= twitter_id.id
+      %td= link_to "Show", twitter_id
+      %td= link_to "Edit", edit_twitter_id_path(twitter_id)
+      %td= link_to "Destroy", twitter_id, :confirm => 'Are you sure?', :method => :delete
+%p= link_to "New Twitter", new_twitter_id_path

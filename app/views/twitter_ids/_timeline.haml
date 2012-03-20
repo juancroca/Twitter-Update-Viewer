@@ -1,0 +1,5 @@
+-current_user.twitter_timeline.each do |item| 
+  %tr.border
+    %td= item.user['screen_name']
+    %td= item.text
+    %td= item.created_at.strftime('%d/%m/%Y')

@@ -1,0 +1,20 @@
+-require 'ostruct'
+
+= form_for current_user, :url => twitter_ids_path do |form|
+  = form.error_messages
+  =form.fields_for :twitter_ids, OpenStruct.new(current_user.twitter_ids) do |f|
+    %p
+      = f.label :id_1, 'twitter id'
+      %br/
+      = f.text_field :id_1
+
+    %p
+      = f.label :id_2, 'twitter id'
+      %br/
+      = f.text_field :id_2
+
+    %p
+      = f.label :id_3, 'twitter id'
+      %br/
+      = f.text_field :id_3
+    %p= f.submit "Save"

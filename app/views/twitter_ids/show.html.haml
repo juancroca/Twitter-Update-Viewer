@@ -1,0 +1,13 @@
+- title "Twitter Timeline"
+%p
+  %table
+    %thead
+      %th Screen Name
+      %th.black Text
+      %th Created At
+    %tbody
+      = render 'timeline'
+%p
+  = link_to "Update", twitter_ids_path, :remote => true
+  |
+  = link_to "Edit", edit_twitter_ids_path
